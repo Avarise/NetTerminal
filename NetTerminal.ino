@@ -23,7 +23,7 @@ class RegistryManager {
 
     int isOccupied (unsigned int index) {
         if (index >= SIZE_AP_REG) return -1;
-        int val = apRegistry[index].bssid[0] + apRegistry[index].bssid[1]
+        bool copy = apRegistry[index].bssid[0] + apRegistry[index].bssid[1]
                 + apRegistry[index].bssid[2] + apRegistry[index].bssid[3]
                 + apRegistry[index].bssid[4] + apRegistry[index].bssid[5];
         if (val) return true;
